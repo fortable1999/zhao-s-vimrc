@@ -1,61 +1,71 @@
 let mapleader = ","
-set nocompatible               " be iMproved
-filetype off                   " required!
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
 
-" My Bundles here:
-"
-" original repos on github
-Bundle 'tpope/vim-fugitive'
+
+
+" Avoid a name conflict with L9
 " Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'tpope/vim-surround'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'vim-scripts/mru.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'robhudson/snipmate_for_django'
-" Bundle 'Raimondi/delimitMate'
-Bundle 'kogakure/vim-sparkup'
-Bundle 'Shougo/neocomplcache'
-" Bundle 'orestis/pysmell'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'vim-scripts/pythoncomplete'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'thinca/vim-localrc'
 " Bundle 'fholgado/minibufexpl.vim'
-" Bundle 'vim-scripts/ShowMarks'
-Bundle 'Lokaltog/vim-powerline'
+" Bundle 'orestis/pysmell'
+" Bundle 'tpope/vim-surround'
 " Bundle 'vim-scripts/Pydiction'
-" use <leader>pW to call the pythondoc
-Bundle 'fs111/pydoc.vim'
-"Bundle 'vim-scripts/SrcExpl'
-Bundle 'lambdalisue/vim-django-support'
-" vim-scripts repos
-Bundle 'L9'
-
+" Bundle 'vim-scripts/ShowMarks'
+" Git plugin not hosted on GitHub
+" Keep Plugin commands between vundle#begin/end.
+" Pass the path to set the runtimepath properly.
+" Plugin 'Raimondi/delimitMate'
+" Plugin 'lambdalisue/vim-django-support'
+" The following are examples of different formats supported.
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" git repos on your local machine (i.e. when working on your own plugin)
+" let Vundle manage Vundle, required
 " non github repos
-Bundle 'git://github.com/scrooloose/nerdtree.git'
-" Bundle 'git://git.wincent.com/command-t.git'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" plugin on GitHub repo
+" use <leader>pW to call the pythondoc
+" vim-scripts repos
+"Bundle 'vim-scripts/SrcExpl'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'L9'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'Shougo/neocomplcache'
+" Plugin 'git://git.wincent.com/command-t.git'
+" Plugin 'kogakure/vim-sparkup'
+Plugin 'msanders/snipmate.vim'
+Plugin 'robhudson/snipmate_for_django'
+Plugin 'tristen/vim-sparkup', {'rtp': 'vim/'}
+Plugin 'scrooloose/nerdtree'
+Plugin 'thinca/vim-localrc'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-fugitive'
+" Plugin 'user/L9', {'name': 'newL9'}
+Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'vim-scripts/mru.vim'
+Plugin 'vim-scripts/pythoncomplete'
+" Plugin 'vim-scripts/taglist.vim'
 
-filetype plugin indent on     " required!
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache
-" first) for foo
-" :BundleClean(!)      - confirm(or auto-approve)
-" removal of unused bundles
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" Put your non-Plugin stuff after this line
 
 syntax on
 set bs=2
